@@ -1,0 +1,13 @@
+$color-primary: #EA6A0A;
+$color-secondary: #F89A3A;
+$color-black: #404040;
+$color-white: #F1F2F3;
+$color-red: #FC033A;
+
+:export {
+	primary: $color-primary;
+	secondary: $color-secondary;
+	black: $color-black;
+	white: $color-white;
+	red: $color-red;
+}
