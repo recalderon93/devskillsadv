@@ -1,16 +1,15 @@
-import React from 'react';
-import { Header } from './components';
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
-import Footer from './components/Footer/Footer';
-import Button from './components/button/Button';
+import StoreContextProvider from './store/StoreContext';
+import AppRoutes from './routes/routes';
 
 function App() {
     return (
-        <div className="App">
-            <Header title={'Form Challenge'} />
-            <Button title="Click Me" width={150} height={44} onClick={() => {}} />
-            <Footer />
-        </div>
+        <StoreContextProvider>
+            <BrowserRouter>
+                <AppRoutes />
+            </BrowserRouter>
+        </StoreContextProvider>
     );
 }
 

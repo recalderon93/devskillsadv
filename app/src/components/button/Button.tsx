@@ -6,12 +6,14 @@ interface ButtonProps {
     width: number;
     height: number;
     onClick: () => void;
+    disabled?: boolean;
 }
-export default function Button({ title, width, height, onClick }: ButtonProps) {
+export default function Button({ title, width, height, disabled, onClick }: ButtonProps) {
     return (
         <button
+            disabled={disabled}
             type="button"
-            className={styles.container}
+            className={`${styles.container} ${disabled && styles.disabled}`}
             style={{ width, height }}
             onClick={onClick}
         >
@@ -19,3 +21,7 @@ export default function Button({ title, width, height, onClick }: ButtonProps) {
         </button>
     );
 }
+
+Button.defaultProps = {
+    disabled: false
+};

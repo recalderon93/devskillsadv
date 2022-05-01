@@ -1,7 +1,8 @@
-@import-normalize 
-
-.App {
+@import-normalize .App {
     text-align: center;
+}
+* {
+    box-sizing: border-box;
 }
 
 .App-logo {

@@ -22,7 +22,7 @@ module.exports = {
 
     rules: {
         'react/jsx-filename-extension': [1, { extensions: ['.tsx'] }],
-        indent: ['error', 4],
+        indent: ['error', 4, { SwitchCase: 1 }],
         'linebreak-style': [0, 'windows'],
         'prettier/prettier': [
             'error',
@@ -41,7 +41,9 @@ module.exports = {
                 component: true,
                 html: true
             }
-        ]
+        ],
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': ['error']
     },
     overrides: [
         {
