@@ -1,0 +1,79 @@
+@import '../../styles/variables.module';
+
+@mixin rowContainerBase {
+	flex: 1;
+	max-width: 950px;
+	display: flex;
+	margin: 0 auto;
+}
+
+@mixin itemContainerBase {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header_wrapper {
+	@include rowContainerBase();
+	height: 50px;
+	background-color: $color-primary;
+
+	.header_item:first-child {
+		max-width: 70px;
+	}
+
+	p {
+		margin: 0;
+		color: $color-white;
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 1;
+	}
+}
+
+.header_item {
+	@include itemContainerBase();
+
+}
+
+.table_item {
+	display: flex;
+	height: 30px;
+	align-items: center;
+	cursor: pointer;
+
+	.table_item_child {
+		flex: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.table_item_child:first-child {
+		max-width: 70px;
+	}
+
+	&.selected {
+		color: $color-secondary !important;
+	}
+
+}
+
+.rows_wrapper {
+	margin: 0 auto;
+	max-width: 950px;
+
+	.table_item:nth-child(even) {
+		background-color: $color-white;
+	}
+
+}
+
+.table_labels {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+	max-width: 950px;
+}
